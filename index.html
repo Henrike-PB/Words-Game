@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo das Letras</title>
+    <link rel="shortcut icon" href="dog.png" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body onload="start_game()">
+    <div class="container">
+
+        <h1>Jogo das Letras</h1>
+
+        <div id="game">
+            <p id="word"></p>
+            <p>Tentativas restantes: <span id="attempts"></span></p>
+            <p>Letras adivinhadas: <span id="guessed-letters"></span></p>
+            <p id="word-length"></p>
+            <p>Progresso: <span id="word-count"></span></p>
+            <input type="text" id="guess" maxlength="1">
+            <button onclick="makeGuess(document.getElementById('guess').value)">Adivinhar</button>
+            <button onclick="getHint()">Pedir Dica</button>
+        </div>
+
+        <div id="bonus-message" style="display: none;">
+            <p>Parabéns! Você finalizou o jogo com sucesso. Aqui está o seu bônus, confira.</p>
+            <a href="gallery.html" class="btn">Ver Galeria</a>
+        </div>
+
+    </div>
+    <div class="dog-image">
+        <img src="dog.png" alt="Cachorro">
+    </div>
+    
+    <footer>
+     © 2024 Henrike Pajares Braga | Todos os direitos reservados.
+    </footer>
+</body>
+</html>
